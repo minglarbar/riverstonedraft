@@ -29,7 +29,7 @@ z-index:1000;
 }
 
 header {
-  background: #0077cc;
+  background: #8dc4ec;
   color: white;
   padding: 20px;
 }
@@ -54,7 +54,8 @@ nav {
 }
 
 nav a {
-  color:white;
+  /* color:white; */
+  color:#0077cc;
   text-decoration: none;
   margin-right: 20px;
   font-weight: bold;
@@ -80,8 +81,9 @@ nav a:hover {
 /* Add Hamburger Menu CSS */
 .menu-toggle{
   display:none;
-  background:#ff6600;
-  color:white;
+  /* background:#ff6600; */
+  /* color:white; */
+  background: #2da5fa;
   border:none;
   font-size:26px;
   padding:8px 14px;
@@ -109,7 +111,8 @@ nav a:hover {
   bottom:0;
   left:0;
   width:100%;
-  background:#ff6600;
+  /* background:#ff6600; */
+  background: #2da5fa;
   color:white;
   padding:16px;
   font-size:18px;
@@ -121,13 +124,14 @@ nav a:hover {
 }
 
 .floating-call-btn:hover {
-  background: #e65c00;
+  background: #0077cc; 
   transform: scale(1.05);
 }
 
 .top_heading{
-    background:#0077cc;
-    color:white;
+    /* background:#0077cc; */
+    background:white;
+    color:#2da5fa;
     text-align:center;
     padding:20px 15px;
     display:flex;
@@ -505,11 +509,11 @@ font-size:16px;
   cursor: pointer;
 }
 
-.quote-btn{
+/* .quote-btn{
   background:#ff6600;
   color:white;
   border-radius:5px;
-}
+} */
 
 .quote-form button:hover {
   background: #005fa3;
@@ -714,6 +718,10 @@ img {
     padding-bottom:70px;
   }
 
+  h1{
+    display:none;
+  }
+
   .floating-call-btn{
     display:block;
   }
@@ -724,8 +732,15 @@ img {
   }
 
 .logo{
-  width:70px;
-  height:50px;
+  width: 100px;
+  height:auto;
+}
+
+.header-brand{
+ display: flex;
+ flex-direction: row;
+ gap:120px;
+
 }
 
   nav{
