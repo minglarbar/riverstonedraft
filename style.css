@@ -1,0 +1,827 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top:120px; /* This prevents your sticky header covering sections when clicking nav links. */
+}
+
+/* Body */
+
+body {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+  background:#f6f8fb;
+}
+
+/* Header */
+
+.TopHeaders{
+position: sticky;
+top:0;
+background:white;
+z-index:1000;
+}
+
+header {
+  background: #0077cc;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  
+}
+
+h1{
+  font-size: clamp(28px,5vw,42px);
+}
+
+/* Navigation */
+
+nav {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top: 10px;
+}
+
+nav a {
+  color:white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size:18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.header-brand{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  gap:20px; 
+}
+.logo{
+  width:110px;
+  height:auto;
+  border-radius: 10px;
+}
+
+/* Add Hamburger Menu CSS */
+.menu-toggle{
+  display:none;
+  background:#ff6600;
+  color:white;
+  border:none;
+  font-size:26px;
+  padding:8px 14px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+
+/* Call Button */
+
+.callbtn {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Floating Call Button */
+.floating-call-btn {
+  display:none;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#ff6600;
+  color:white;
+  padding:16px;
+  font-size:18px;
+  font-weight:bold;
+  text-decoration:none;
+  text-align:center;
+  z-index:1000;
+  box-shadow:0 -3px 10px rgba(0,0,0,0.2);
+}
+
+.floating-call-btn:hover {
+  background: #e65c00;
+  transform: scale(1.05);
+}
+
+.top_heading{
+    background:#0077cc;
+    color:white;
+    text-align:center;
+    padding:20px 15px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+/* #top,
+#our-services,
+#contact,
+#quote-form,
+#area,
+#review{
+scroll-margin-top: 200px;
+} */
+
+  .top_heading h2 {
+    font-size: 28px; /* bigger top_heading heading */
+  }
+
+    .top_heading p {
+    font-size: 18px; /* bigger top_heading paragraph */
+  }
+
+.testimonials h2 {
+    font-size: 28px; /* bigger testimonials heading */
+  }
+
+.review p {
+    font-size: 17px; /* bigger review text */
+  }
+
+
+/* HERO SECTION */
+
+.hero{
+  position:relative;
+  width:100%;
+}
+
+/* Hero Image */
+
+.hero img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  display:block;
+}
+
+/* Text Overlay */
+
+.hero-overlay{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+  background:rgba(0,0,0,0.2);
+  color:white;
+
+  padding:25px 30px;
+  border-radius:8px;
+
+  text-align:center;
+
+  width:90%;
+  max-width:650px;
+}
+
+/* Hero Heading */
+
+.hero-overlay h2{
+  font-size:clamp(26px,4vw,40px);
+  margin-bottom:10px;
+}
+
+/* Hero Text */
+
+.hero-overlay p{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+/* Call Button */
+
+.hero-call{
+  display:inline-block;
+  margin-top:10px;
+  background:#ff6600;
+  color:white;
+  padding:12px 24px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.hero-call:hover{
+  background:#e65c00;
+}
+
+
+/* Trust Worth Section*/
+.trust-bar{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  background:#ffffff;
+  padding:20px;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  font-weight:bold;
+}
+
+.trust-item{
+  color:#0077cc;
+  font-size:16px;
+}
+
+/* Services Section */
+
+
+#services {
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.service img{
+  width:80%;
+  margin-bottom:15px;
+}
+
+.service:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.TopHeaders{
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Plumbing Image Section */
+
+.plumber-image-section {
+  width: 100%;
+  padding: 60px 0;
+  background: #f4f4f4;
+}
+
+.image-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Service Boxes */
+
+.our_services_title, 
+.contact_us_title, 
+.free_quote_title, 
+.service_area_title,
+.testimonial_title,
+.google_reviews_title
+{
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  text-align: center;
+  background: #f4f4f4;
+  font-size: clamp(24px,4vw,36px);
+  position:relative;
+}
+
+.our_services_title::after, .contact_us_title::after{
+content:"";
+width:60px;
+height:4px;
+background:#2c7be5;
+display:block;
+margin:10px auto 0;
+border-radius:2px;
+}
+
+.free_quote_title::after{
+content:"";
+width:60px;
+height:4px;
+background:#2c7be5;
+display:block;
+margin:10px auto 0;
+border-radius:2px;
+}
+
+.service_area_title::after{
+  content:"";
+  width:60px;
+  height:4px;
+  background:#2c7be5;
+  display:block;
+  margin:10px auto 0;
+  border-radius:2px;
+}
+
+.testimonial_title::after{
+  content:"";
+  width:60px;
+  height:4px;
+  background:#2c7be5;
+  display:block;
+  margin:10px auto 0;
+  border-radius:2px;
+}
+
+.contact-section{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.contact-card{
+    text-align: center;
+    max-width: 220px;
+}
+
+.icon-circle{
+    width: 70px;
+    height: 70px;
+    /* background-color: #0077cc; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+}
+
+.icon-circle img{
+    width: 40px;
+    height: 40px;
+    /* filter: invert(1); */
+}
+
+.contact-card h3{
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #0077cc;
+}
+
+.contact-card p{
+    margin: 0;
+    font-size: 15px;
+}
+
+.contact-card a{
+    text-decoration: none;
+    color: #333; 
+}
+
+.contact-card a:hover{
+    color: #0077cc;
+    cursor:hand;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  color: #0077cc;
+  font-size: clamp(20px,3vw,26px);
+}
+
+.testimonials{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.testimonial-slider{
+  position:relative;
+  max-width:700px;
+  margin:auto;
+  overflow:hidden;
+}
+
+.review{
+  display:none;
+  background:#f4f4f4;
+  margin:20px auto;
+  padding:25px;
+  border-radius:8px;
+}
+
+.review.active{
+  display:block;
+}
+
+.review p{
+font-size:clamp(16px,2.5vw,20px);
+}
+
+.review strong{
+font-size:16px;
+}
+
+/* Quote Form Section */
+.quote-form {
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Form Layout */
+.quote-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.quote-form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Inputs, Select, Textarea */
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Textarea */
+.quote-form textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.quote-form button {
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 18px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quote-btn{
+  background:#ff6600;
+  color:white;
+  border-radius:5px;
+}
+
+.quote-form button:hover {
+  background: #005fa3;
+}
+
+.service-area{
+    padding:50px 20px;
+    background:#f5f7fa;
+}
+
+.service-area-container{
+    display:flex;
+    gap:40px;
+    max-width:1100px;
+    margin:auto;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.service-map{
+  flex:1;
+  min-width:280px;
+}
+
+.service-map iframe{
+    width:100%;
+    height:350px;
+    border:0;
+    border-radius:8px;
+}
+
+.service-suburbs{
+    flex:1;
+    min-width:250px;
+}
+
+.service-suburbs h3{
+    margin-bottom:15px;
+}
+
+.service-suburbs ul{
+    list-style:none;
+    padding:0;
+}
+
+.service-suburbs li{
+    padding:6px 0;
+    font-size:16px;
+}
+
+
+
+
+.google-review-placeholder{
+  padding:40px;
+  background:#ffffff;
+  border-radius:8px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  max-width:600px;
+  margin:auto;
+  font-size:18px;
+  color:#666;
+  text-align: center;
+}
+
+
+/* Success Popup Box */
+
+.success-box{
+text-align:center;
+padding:30px;
+}
+
+/* Circle */
+
+.checkmark-circle{
+width:80px;
+height:80px;
+border-radius:50%;
+background:#28a745;
+margin:0 auto 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+animation:pop 0.4s ease;
+}
+
+/* Checkmark */
+
+.checkmark{
+  width:25px;
+  height:50px;
+  border-right:5px solid white;
+  border-bottom:5px solid white;
+  transform:rotate(45deg);
+}
+
+/* Pop Animation */
+
+@keyframes pop{
+  0%{
+    transform:scale(0.5);
+    opacity:0;
+  }
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+/* Footer */
+
+
+/* .call-emergency{
+    display:inline-block;
+    margin-top:20px;
+    background:#ff6600;
+    color:white;
+    padding:15px 25px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:6px;
+} */
+
+.map{
+    margin-top:30px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px; 
+}
+
+.contact-info p{
+  font-size: 20px;
+}
+
+/* Images Responsive */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Modal Background */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: popup 0.3s ease;
+}
+
+/* Close Button */
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Animation */
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mobile Friendly */
+
+ @media (max-width:768px){
+
+  body{
+    padding-bottom:70px;
+  }
+
+  .floating-call-btn{
+    display:block;
+  }
+
+  .menu-toggle{
+    display:block;
+    /* margin-top:10px; */
+  }
+
+.logo{
+  width:70px;
+  height:50px;
+}
+
+  nav{
+    display:none;
+    flex-direction:column;
+    width:100%;
+  }
+
+  /* nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+  } */
+
+  nav a{
+    padding:10px;
+    border-top:1px solid rgba(255,255,255,0.3);
+  }
+
+  nav.show{
+    display:flex;
+  }
+
+  /* hero related */
+  .hero img{
+      height:320px;
+  }
+
+  .hero-overlay{
+    padding:15px 18px;
+    width:92%;
+  }
+
+  .hero-overlay h2{
+    font-size:22px;
+  }
+
+  .hero-overlay p{
+    font-size:15px;
+  }
+
+  .hero-rating{
+margin-top:15px;
+font-size:16px;
+color:#ffd700;
+}
+
+.hero-rating p{
+color:white;
+font-size:14px;
+margin-top:5px;
+}
+
+  
+  .trust-bar{
+    gap:15px;
+    font-size:14px;
+  }
+  .service{
+    max-width:100%;
+  }
+
+  .service-area-container{
+    flex-direction:column;
+  }
+
+  .service-map{
+    min-width:100%;
+  }
+
+  .contact-section{
+    flex-direction:column;
+    align-items:center;
+  }
+
+}
+
+
+/* Improve Desktop Layout */
+@media (min-width:1024px){
+
+#services{
+gap:30px;
+}
+
+.service{
+  flex:1 1 250px;
+  max-width:260px;
+  background:white;
+  padding:30px 20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:transform 0.25s, box-shadow 0.25s;
+}
+
+}
